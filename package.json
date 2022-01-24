@@ -1,0 +1,20 @@
+{
+  "name": "api-kenziefood-m2-lufelipe12",
+  "version": "1.0.0",
+  "description": "Nesse trabalho vocês terão que consumir uma API de produtos.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run": "nodemon ./src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kenzie-Academy-Brasil-Developers/api-kenziefood-m2-lufelipe12.git"
+  },
+  "author": "Dupla Luiz e Bryan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kenzie-Academy-Brasil-Developers/api-kenziefood-m2-lufelipe12/issues"
+  },
+  "homepage": "https://github.com/Kenzie-Academy-Brasil-Developers/api-kenziefood-m2-lufelipe12#readme"
+}
