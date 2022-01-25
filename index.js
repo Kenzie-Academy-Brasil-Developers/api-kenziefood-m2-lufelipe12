@@ -3,6 +3,8 @@ const main = document.getElementById('mainProducts')
 const cart = document.getElementById('itemsToBuy')
 
 export default function creatingShowCase(item) {
+    
+    main.innerText = ""
     item.forEach(item => {
 
         const { categoria, descricao, imagem, nome, preco, id } = item;
