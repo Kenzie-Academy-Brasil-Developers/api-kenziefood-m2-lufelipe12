@@ -1,17 +1,17 @@
 import db from "../mock/db.js";
 import creatingShowCase from "../../../index.js"
 
-const input = document.querySelector(".input")
-const all = document.querySelector(".todos")
-const drinks = document.querySelector(".bebidas")
-const bakery = document.querySelector(".panificadora")
-const fruits = document.querySelector(".frutas")
-
 function allItems(){
     const response = db;
     creatingShowCase(response)
 }
 allItems()
+
+const input = document.querySelector(".input")
+const all = document.querySelector(".todos")
+const drinks = document.querySelector(".bebidas")
+const bakery = document.querySelector(".panificadora")
+const fruits = document.querySelector(".frutas")
 
 function inputFilter(name){
     const response = db;
@@ -24,7 +24,6 @@ function inputFilter(name){
 
 input.addEventListener('keyup', function(){
     inputFilter(input.value)
-    
 })
 
 function sectionFilter(section){
@@ -45,13 +44,11 @@ drinks.addEventListener('click', function(){
 
 bakery.addEventListener('click', function(){
     sectionFilter("panificadora")
-    console.log("passando aqui")
 })
 
 fruits.addEventListener('click', function(){
     sectionFilter("frutas")
 })
-
 
 
 
