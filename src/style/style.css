@@ -61,3 +61,7 @@ main div p{
     align-items: center;
 }
 
+/* aqui está o balanço de itens e preço escondido */
+#balance{
+    display: none;
+}
