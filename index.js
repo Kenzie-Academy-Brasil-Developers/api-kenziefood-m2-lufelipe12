@@ -1,7 +1,7 @@
-function creatingShowCase(item){ 
+export default function creatingShowCase(item){ 
     item.forEach(item => {
     
-    const {categoria, descricao, imagem, nome, preco} = item;
+    const {categoria, descricao, imagem, nome, preco, id} = item;
     
     const div = document.createElement("div");
     const img = document.createElement("img");
@@ -17,7 +17,7 @@ function creatingShowCase(item){
     description.innerText   =  descricao;
     price.innerText         =  preco;
     button.innerText        =  "icone"
-    button.id               =  "add"
+    button.id               =  id
 
     div.appendChild(img);
     div.appendChild(cat);
@@ -29,3 +29,6 @@ function creatingShowCase(item){
 
     })
 }
+
+
+
