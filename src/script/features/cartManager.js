@@ -1,10 +1,12 @@
 import db from '../mock/db.js'
 const main = document.getElementById('mainProducts')
 const cart = document.getElementById('itemsToBuy')
+const empty = document.getElementById('emptyCar')
+const balance = document.getElementById('balance')
 let itemsInCart = []
 
 function addToCart(productId, productList) {
-    const filteredProduct = productList.find(selectedProduct => selectedProduct.id == productId )
+    const filteredProduct = productList.find(selectedProduct => selectedProduct.id == productId)
     itemsInCart.push(filteredProduct)
 }
 
@@ -15,7 +17,7 @@ function cartMaker(itemsInCart) {
     const price = document.createElement('span')
     const button = document.createElement('button')
     const div = document.createElement('div')
-    
+
     img.src = itemsInCart.imagem
     name.innerText = itemsInCart.nome
     type.innerText = itemsInCart.categoria
@@ -47,7 +49,7 @@ const totalPrice = (itemsInCart) => {
 const attPrice = (totalPrice, itemsInCart) => {
     let price = document.getElementById('price')
     let quantity = document.getElementById('quantity')
-    price.innerText = `R$ ${totalPrice(itemsInCart)}`
+    price.innerText = `R$ ${totalPrice(itemsInCart).toFixed(2)}`
     quantity.innerText = itemsInCart.length
 }
 
@@ -58,7 +60,9 @@ export const mainInterceptor = (evt) => {
         const productId = buyButton.getAttribute('id')
         addToCart(productId, db)
         makingCart(itemsInCart, cartMaker)
+        balance.style.display = 'block'
         attPrice(totalPrice, itemsInCart)
+        empty.style.display = 'none'
     }
 
 }
@@ -77,6 +81,10 @@ export const cartInterceptor = (evt) => {
         eraseItem(itemsInCart, productId)
         makingCart(itemsInCart, cartMaker)
         attPrice(totalPrice, itemsInCart)
+        if (itemsInCart.length === 0) {
+            empty.style.display = 'block'
+            balance.style.display = 'none'
+        }
     }
 }
 
