@@ -1,7 +1,3 @@
-//ADICIONAR PRODUTOS AO ARRAY 
-//JOGAR ESSES PRODUTOS NO DOM
-//ATUALIZAR PREÇO DINAMICAMENTE
-
 import db from '../mock/db.js'
 const main = document.getElementById('mainProducts')
 const cart = document.getElementById('itemsToBuy')
@@ -18,7 +14,8 @@ function cartMaker(itemsInCart) {
     const type = document.createElement('span')
     const price = document.createElement('span')
     const button = document.createElement('button')
-
+    const div = document.createElement('div')
+    
     img.src = itemsInCart.imagem
     name.innerText = itemsInCart.nome
     type.innerText = itemsInCart.categoria
@@ -26,11 +23,12 @@ function cartMaker(itemsInCart) {
     button.setAttribute('data-id', itemsInCart.id)
     button.innerText = 'X'
 
-    cart.appendChild(img)
-    cart.appendChild(name)
-    cart.appendChild(type)
-    cart.appendChild(price)
-    cart.appendChild(button)
+    cart.appendChild(div)
+    div.appendChild(img)
+    div.appendChild(name)
+    div.appendChild(type)
+    div.appendChild(price)
+    div.appendChild(button)
 }
 
 const makingCart = (itemsInCart, cartMaker) => {
@@ -58,19 +56,12 @@ export const mainInterceptor = (evt) => {
     const buyButton = evt.target
     if (buyButton.tagName === 'BUTTON') {
         const productId = buyButton.getAttribute('id')
-        console.log('teste')
         addToCart(productId, db)
         makingCart(itemsInCart, cartMaker)
         attPrice(totalPrice, itemsInCart)
     }
 
 }
-
-//COMPARAR O DATA-ID DO PRODUTO CLICADO COM O ID DO ARRAY **
-//ENCONTRAR O INDEX DESSE PRODUTO **
-//RETIRAR O PRODUTO DO ARRAY
-//RECRIAR O CARRINHO
-//ATUALIZAR O PREÇO
 
 const eraseItem = (itemsInCart, itemId) => {
     let product = itemsInCart.find(item => itemId == item.id)
@@ -82,7 +73,6 @@ export const cartInterceptor = (evt) => {
 
     const eraseButton = evt.target
     if (eraseButton.tagName === 'BUTTON') {
-        //ATIVAR AS FUNCIONALIDADES DO CARRINHO
         const productId = eraseButton.getAttribute('id')
         eraseItem(itemsInCart, productId)
         makingCart(itemsInCart, cartMaker)
