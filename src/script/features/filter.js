@@ -11,9 +11,9 @@ async function inputFilter(name){
     creatingShowCase(input)
 }
 
-input.addEventListener('keyup', function(){
-    inputFilter(input.value)
-})
+// input.addEventListener('keyup', function(){
+//     inputFilter(input.value)
+// })
 
 async function allItems(){
     const response = db;
