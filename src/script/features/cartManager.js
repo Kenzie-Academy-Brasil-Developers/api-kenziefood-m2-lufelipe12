@@ -21,7 +21,6 @@ function cartMaker(itemsInCart) {
     type.innerText = itemsInCart.categoria
     price.innerText = `R$ ${itemsInCart.preco.toFixed(2)}`
     button.setAttribute('data-id', itemsInCart.id)
-    //button.innerHTML = 
 
     cart.appendChild(img)
     cart.appendChild(name)
@@ -45,6 +44,7 @@ const totalPrice = (itemsInCart) => {
 
 const attPrice = (totalPrice, itemsInCart) => {
     let price = document.getElementById('price')
+    //atualizar quantidade
     price.innerText = `R$ ${totalPrice(itemsInCart)}`
 }
 
@@ -77,12 +77,10 @@ export const cartInterceptor = (evt) => {
     const eraseButton = evt.target
     if (eraseButton.tagName === 'BUTTON') {
         //ATIVAR AS FUNCIONALIDADES DO CARRINHO
-        const productId = eraseButton.getAttribute('data-id')
+        const productId = eraseButton.getAttribute('id')
         eraseItem(itemsInCart, productId)
         makingCart(itemsInCart, cartMaker)
         attPrice(totalPrice, itemsInCart)
     }
 }
-
-
 
