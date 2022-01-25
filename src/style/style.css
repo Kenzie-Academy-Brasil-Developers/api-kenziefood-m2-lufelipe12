@@ -1,9 +1,127 @@
-body{
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+  
+}
+
+header{
+    width: 100%;
+    height: 75px;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+header img{
+    width: 125px;
+    height: 33px;
+}
+
+.search{
+    width: 310px;
+}
+
+main {
+    display: flex;
+    overflow: scroll;
+    display: flex;
+}
+
+main div {
+    max-width: 300px;
+    width: 300px;
+    height: 400px;
+    padding: 0px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+main div h2{
+    font-weight: bold;
+}
+
+main img {
+    max-width: 300px;
+    width: 300px;
+    height: 200px;
+}
+
+main p{
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 12px;
+    line-height: 16px;
+}
+
+maindiv{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#tittle{
+    width: 320px;
+    height: 60px;
+    padding-left: 5px;
+    background-color: #FF2253;
+    color: white;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+main img{
+    border: 3px solid #FFE9EE;
+    border-radius: 8px;
+}
+
+main h2{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+main p{
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+.add{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: none;
+    background-color: #E4F7EF;
+}
+
+
+.todos, .bebidas, .panificadora, .frutas{
+    width: 94px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: #FFE9EE;
     display: flex;
     justify-content: center;
+    align-items: center;
+    font-size: 11px;
+    color: #212529;
+    margin-top: -15px;
+    margin-left: 10px;
+    border: none;
 }
 
 /* aqui está o balanço de itens e preço escondido */
 #balance{
     display: none;
+}
+
+
+
+@media(min-width: 1024px){
+    main {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }

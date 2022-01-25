@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Poppins&family=Spectral&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./src/style/reset.css">
     <link rel="stylesheet" href="./src/style/style.css">
     <title>Kenzie Foods</title>
@@ -14,8 +18,16 @@
 
     <header>
         <img src="./src/images/kenziefoodslogo.png" alt="logo kenzie">
-        <input type="text" placeholder="Pesquisa por produto" class="input">
-        <button id="search">Pesquisa</button>
+        <div class='search'>
+            <input type="text" placeholder="Pesquisa por produto" class="input">
+            <button id="search">Pesquisa</button>
+        </div>
+        <div>
+            <button class="todos">todos</button>
+            <button class="bebidas">bebidas</button>
+            <button class="panificadora">panificadora</button>
+            <button class="frutas">frutas</button>
+        </div>
     </header>
 
     <main id="mainProducts">
@@ -23,8 +35,7 @@
     </main>
 
     <section id="cart">
-
-        <div id="title">
+        <div id="tittle">
             <img src="" alt="">
             <h1>Carrinho</h1>
         </div>
@@ -38,6 +49,7 @@
 
         <!-- Esse span deve aparecer somente quando o carrinho tiver item -->
         <div id="itemsToBuy"></div>
+
         <div id="balance">
             <span>Quantidade</span>
             <span id="quantity">0</span>
