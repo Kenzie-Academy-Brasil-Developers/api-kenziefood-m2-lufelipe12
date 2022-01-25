@@ -1,13 +1,16 @@
 
 import {cartInterceptor, mainInterceptor} from './src/script/features/cartManager.js'
+
 const main = document.getElementById('mainProducts')
 const cart = document.getElementById('itemsToBuy')
 
-export default function creatingShowCase(item){ 
+export default function creatingShowCase(item){
+    main.innerText = ""; 
     item.forEach(item => {
     
     const {categoria, descricao, imagem, nome, preco, id} = item;
     
+    const divProduct = document.createElement("div")
     const img = document.createElement("img");
     const cat = document.createElement("span");
     const name = document.createElement("h2");
@@ -23,13 +26,13 @@ export default function creatingShowCase(item){
     button.innerText        =  "icone"
     button.id               =  id
 
-    main.appendChild(img);
-    main.appendChild(cat);
-    main.appendChild(name);
-    main.appendChild(description);
-    main.appendChild(price);
-    main.appendChild(button)
-    document.body.appendChild(main);
+    divProduct.appendChild(img);
+    divProduct.appendChild(cat);
+    divProduct.appendChild(name);
+    divProduct.appendChild(description);
+    divProduct.appendChild(price);
+    divProduct.appendChild(button)
+    main.appendChild(divProduct);
     })
 }
 

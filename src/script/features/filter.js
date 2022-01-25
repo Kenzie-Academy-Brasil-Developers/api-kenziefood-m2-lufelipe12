@@ -6,14 +6,15 @@ const input = document.querySelector(".input")
 async function inputFilter(name){
     const response = db;
     const input = response.filter(item => {
-        return item.nome.toLowerCase() === name.toLowerCase();
+        return item.nome.toLowerCase().includes(name.toLowerCase());
     })
     creatingShowCase(input)
 }
 
-// input.addEventListener('keyup', function(){
-//     inputFilter(input.value)
-// })
+input.addEventListener('keyup', function(){
+    inputFilter(input.value)
+    
+})
 
 async function allItems(){
     const response = db;
@@ -21,3 +22,5 @@ async function allItems(){
 }
 
 allItems()
+
+

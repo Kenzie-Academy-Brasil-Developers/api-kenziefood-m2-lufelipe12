@@ -1,6 +1,7 @@
 //ADICIONAR PRODUTOS AO ARRAY 
 //JOGAR ESSES PRODUTOS NO DOM
 //ATUALIZAR PREÇO DINAMICAMENTE
+
 import db from '../mock/db.js'
 const main = document.getElementById('mainProducts')
 const cart = document.getElementById('itemsToBuy')
