@@ -1,4 +1,3 @@
-
 import { cartInterceptor, mainInterceptor } from './src/script/features/cartManager.js'
 const main = document.getElementById('mainProducts')
 const cart = document.getElementById('itemsToBuy')
