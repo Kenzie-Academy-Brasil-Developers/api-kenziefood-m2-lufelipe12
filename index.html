@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,33 +9,37 @@
     <link rel="stylesheet" href="./src/style/style.css">
     <title>Kenzie Foods</title>
 </head>
+
 <body>
-<header>
-    <img src="./src/images/kenziefoodslogo.png" alt="logo kenzie">
-    <input type="text" placeholder="Pesquisa por produto">
-    <button id="search">Pesquisa</button>
-</header>
- <main id="mainProducts">
-     <!-- aqui ficam os produtos -->
- </main>
-
-<section id="cart">
-    <div id="title">
-        <img src="" alt="">
-        <h1>Carrinho</h1>
-    </div>
-
-    <!-- Essa parte somente aparece quando o carrinho está vazio -->
-     <img src="./src/images/cart.png" alt="carrinho">
-     <span>Ops!</span>
-     <p>Por enquanto não temos produto no carrinho</p>
-     <span>Quantidade</span>
-     <span>0</span>
-
-     <!-- Esse span deve aparecer somente quando o carrinho tiver item -->
-     <span>Preço</span>
-     <span>R$ 0</span>
-</section>
+    <header>
+        <img src="./src/images/kenziefoodslogo.png" alt="logo kenzie">
+        <input type="text" placeholder="Pesquisa por produto">
+        <button id="search">Pesquisa</button>
+    </header>
+    <main id="mainProducts">
+        <!-- aqui ficam os produtos -->
+    </main>
+    <section id="cart">
+        <div id="title">
+            <img src="" alt="">
+            <h1>Carrinho</h1>
+        </div>
+        <!-- Essa parte somente aparece quando o carrinho está vazio -->
+        <div id="emptyCar">
+            <img src="./src/images/cart.png" alt="carrinho">
+            <span>Ops!</span>
+            <p>Por enquanto não temos produto no carrinho</p>
+        </div>
+        <!-- Esse span deve aparecer somente quando o carrinho tiver item -->
+        <div id="itemsToBuy">
+            
+        </div>
+        <span>Quantidade</span>
+            <span id="quantity">0</span>
+            <span>Preço</span>
+            <span id="price">R$ 0</span>
+    </section>
     <script type="module" src="./index.js"></script>
 </body>
+
 </html>

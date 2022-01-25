@@ -17,6 +17,7 @@ function creatingShowCase(item){
     description.innerText   =  descricao;
     price.innerText         =  preco;
     button.innerText        =  "icone"
+    //setAtributte = data-id, id do produto
     button.id               =  "add"
 
     div.appendChild(img);
