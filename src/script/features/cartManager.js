@@ -59,7 +59,6 @@ const attPrice = (totalPrice, itemsInCart) => {
 }
 
 export const mainInterceptor = (evt) => {
-    console.log(local)
     const buyButton = evt.target;
     if (buyButton.className === 'add') {
         const productId = buyButton.getAttribute('id');
