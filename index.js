@@ -26,7 +26,7 @@ export default function creatingShowCase(item) {
         name.innerText = nome;
         description.innerText = descricao;
         price.innerText = preco;
-        button.innerText = "icone";
+        button.innerText = "🛒";
         button.id = id;
         button.className = "add";
 

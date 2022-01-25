@@ -16,7 +16,8 @@ allItems()
 function inputFilter(name){
     const response = db;
     const input = response.filter(item => {
-        return item.nome.toLowerCase().includes(name.toLowerCase()) 
+        return item.nome.toLowerCase().includes(name.toLowerCase()) ||
+        item.categoria.toLowerCase().includes(name.toLowerCase())
     })
     creatingShowCase(input)
 }
