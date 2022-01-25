@@ -1,6 +1,3 @@
-const main = document.getElementById('mainProducts')
-const cart = document.getElementById('itemsToBuy')
-
 //ADICIONAR PRODUTOS AO ARRAY 
 //JOGAR ESSES PRODUTOS NO DOM
 //ATUALIZAR PREÇO DINAMICAMENTE
@@ -12,7 +9,7 @@ function addToCart(productId, productList) {
     itemsInCart.push(filteredProduct)
 }
 
-function cartMaker(itemsInCart){
+function cartMaker(itemsInCart) {
     const img = document.createElement('img')
     const name = document.createElement('p')
     const type = document.createElement('span')
@@ -39,11 +36,11 @@ const makingCart = (itemsInCart, cartMaker) => {
 
     itemsInCart.forEach(element => {
         cartMaker(element)
-    })    
+    })
 }
 
 const totalPrice = (itemsInCart) => {
-    return itemsInCart.reduce((a , b) => a.preco + b, 0)
+    return itemsInCart.reduce((a, b) => a.preco + b, 0)
 }
 
 const attPrice = (totalPrice, itemsInCart) => {
@@ -51,7 +48,7 @@ const attPrice = (totalPrice, itemsInCart) => {
     price.innerText = `R$ ${totalPrice(itemsInCart)}`
 }
 
-const mainInterceptor = (evt) => {
+export const mainInterceptor = (evt) => {
 
     const buyButton = evt.target
     if (buyButton.tagName === 'BUTTON') {
@@ -62,8 +59,6 @@ const mainInterceptor = (evt) => {
     }
 
 }
-
-main.addEventListener('click', mainInterceptor)
 
 //COMPARAR O DATA-ID DO PRODUTO CLICADO COM O ID DO ARRAY **
 //ENCONTRAR O INDEX DESSE PRODUTO **
@@ -77,7 +72,7 @@ const eraseItem = (itemsInCart, itemId) => {
     itemsInCart.splice(index, 1)
 }
 
-const cartInterceptor = (evt) => {
+export const cartInterceptor = (evt) => {
 
     const eraseButton = evt.target
     if (eraseButton.tagName === 'BUTTON') {
@@ -87,7 +82,7 @@ const cartInterceptor = (evt) => {
         makingCart(itemsInCart, cartMaker)
         attPrice(totalPrice, itemsInCart)
     }
-
 }
 
-cart.addEventListener('click', cartInterceptor)
+
+
