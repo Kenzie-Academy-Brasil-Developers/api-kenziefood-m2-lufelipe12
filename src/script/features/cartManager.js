@@ -73,7 +73,6 @@ export const cartInterceptor = (evt) => {
 
     const eraseButton = evt.target
     if (eraseButton.tagName === 'BUTTON') {
-        //ATIVAR AS FUNCIONALIDADES DO CARRINHO
         const productId = eraseButton.getAttribute('id')
         eraseItem(itemsInCart, productId)
         makingCart(itemsInCart, cartMaker)
