@@ -3,13 +3,26 @@ import { cart, empty, balance, CartManager } from './features/cartManager.js'
 
 const main = document.getElementById('mainProducts')
 
+class produtos{
+    constructor({ categoria, descricao, imagem, nome, preco, id }){
+        this.categoria = categoria;
+        this.descricao = descricao;
+        this.imagem = imagem;
+        this.nome = nome;
+        this.preco = preco;
+        this.id = id;
+    }    
+}
+
 export default function creatingShowCase(item) {
 
     main.innerText = ""
 
     item.forEach(item => {
 
-        const { categoria, descricao, imagem, nome, preco, id } = item;
+        const newProduct = new produtos(item);
+
+        const {categoria, descricao, imagem, nome, preco, id} = newProduct
 
         const div = document.createElement("div")
         const img = document.createElement("img");
