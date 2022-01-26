@@ -1,7 +1,7 @@
 import {db} from "../mock/db.js";
-import creatingShowCase from "../../../index.js"
+import creatingShowCase from "../render.js"
 
-function buttonSectionEvent(){
+function buttonSectionEvent() {
     let productSection = document.querySelectorAll('#section')
     productSection.forEach(item => {
         item.addEventListener('click', () => {
@@ -15,6 +15,7 @@ function allItems() {
     creatingShowCase(response)
     buttonSectionEvent()
 }
+
 allItems()
 
 function inputFilter(name) {

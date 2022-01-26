@@ -14,32 +14,26 @@ async function handleSubmit(evt) {
 
     for (let i = 0; i < elements.length; i++) {
         let item = elements[i];
-
         if (item.name !== "") {
             data[item.name] = item.value
         }
-
         if (item.name === "id" && item.value !== "") {
             boleano = true;
             id = item.value;
         }
     }
-
     if (boleano) {
         const response = await patchApi(data, id);
     } else {
         const response = await createUpdateUser(data);
     }
-
 }
 registerForm.addEventListener("submit", handleSubmit)
 
 //rota post 
 async function createUpdateUser(data) {
-
     const response = await fetch(
         `https://kenzie-food-api.herokuapp.com/my/product`,
-
         {
             method: "post",
             headers: {
@@ -48,16 +42,13 @@ async function createUpdateUser(data) {
             },
             body: JSON.stringify(data),
         }
-
     )
     return response;
 }
 
 //rota patch 
 async function patchApi(data, id) {
-
     if (id === undefined) { id = "/"; }
-
     const response = await fetch(`https://kenzie-food-api.herokuapp.com/my/product/${id}`,
         {
             method: "PATCH",
@@ -72,12 +63,8 @@ async function patchApi(data, id) {
 
 //rota get 
 async function getApi(id) {
-
-
     if (id === undefined) { id = "/"; }
-
     const response = await fetch(`https://kenzie-food-api.herokuapp.com/my/product/${id}`,
-
         {
             headers: {
                 "Content-Type": "application/json",
@@ -88,6 +75,7 @@ async function getApi(id) {
     const json = await response.json();
     console.log(json)
 }
+
 get.addEventListener('click', async function () {
     getApi(inputGet.value)
 })
@@ -107,6 +95,7 @@ async function deleteApi(id) {
             }
         })
 }
+
 del.addEventListener('click', async function () {
     deleteApi(inputDel.value)
 })

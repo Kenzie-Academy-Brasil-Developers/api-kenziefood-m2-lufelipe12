@@ -15,19 +15,19 @@ header {
     flex-direction: column;
 }
 
-.inputButton{
+.inputButton {
     display: flex;
     justify-content: center;
     background-color: #F8F9FA;
     border-radius: 30px;
 }
 
-div button img{
+div button img {
     width: 15px;
     height: 15px;
 }
 
-header button{
+header button {
     border: none;
     border-radius: 50%;
     background-color: #F8F9FA;
@@ -40,7 +40,7 @@ header button{
     flex-direction: column;
 }
 
-h1{
+h1 {
     color: white;
     font-weight: 700;
 }
@@ -148,7 +148,6 @@ main section {
     background: #F8F9FA;
     font-size: 11px;
     color: #868E96;
-    ;
 }
 
 #itemsToBuy img {
@@ -213,7 +212,6 @@ main p {
     margin: 20px 20px;
     justify-content: center;
     align-items: center;
-
 }
 
 button:hover {
@@ -237,9 +235,11 @@ button:hover {
 
 .button button {
     background-color: white;
+    transition: 0.4s;
 }
 
 .button button:hover {
+    transition: 0.4s;
     background-color: #FFE4EA;
     border: 1px solid #8c8e92;
 }
@@ -289,12 +289,10 @@ button:hover {
         margin-bottom: 20px;
         flex-direction: row;
         justify-content: space-between;
-
     }
 
     .button {
         justify-content: flex-start;
-
     }
 
 }
@@ -304,7 +302,7 @@ button:hover {
         width: 1000px;
     }
 
-    header{
+    header {
         padding: 0px 40px;
     }
 
@@ -315,21 +313,22 @@ button:hover {
     }
 }
 
-@media(min-width:1440px){
-    header{
+@media(min-width:1440px) {
+    header {
         padding: 0px 70px;
     }
+
     .button {
         padding: 0px 25px;
-     }
+    }
 }
 
-@media(min-width:1600px){
-    header{
+@media(min-width:1600px) {
+    header {
         padding: 0px 150px;
     }
 
     .button {
-       padding: 0px 105px;
+        padding: 0px 105px;
     }
 }
