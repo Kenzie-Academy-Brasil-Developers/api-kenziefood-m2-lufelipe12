@@ -5,3 +5,4 @@ async function getProducts(){
     return response;    
 }
 export default db = await getProducts()
+
