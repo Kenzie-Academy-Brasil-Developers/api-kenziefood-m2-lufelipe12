@@ -4,43 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/style/admin.css">
     <title>teste</title>
 </head>
 <body>
 
     <div class="container">
-        <h1>Fazendo requisição POST</h1>
-        <form id="register-form">
 
-          <div class="input-box">
-            <label>Nome</label>
-            <input autocomplete="off" type="text" name="nome" id="name" />
-          </div>
-
-          <div class="input-box">
-            <label>Preço</label>
-            <input autocomplete="off" type="text" name="preco" id="price" />
-          </div>
-
-          <div class="input-box">
-            <label>Categoria</label>
-            <input autocomplete="off" type="text" name="categoria" id="cat" />
-          </div>
-
-          <div class="input-box">
-            <label>imagem</label>
-            <input autocomplete="off" type="text" name="imagem" id="img" />
-          </div>
-
-          <div class="input-box">
-            <label>Descrição</label>
-            <input autocomplete="off" type="text" name="descricao" id="description" />
-          </div>
-
-          <button type="submit">Enviar</button>
-
+        <form id="path-post">
+          <h2>Atualizar ou adicionar um produto</h2>    
+            <input autocomplete="off" placeholder="nome" type="text" name="nome" id="name"/>
+            <input autocomplete="off" placeholder="Preço" type="text" name="preco" id="price" />
+            <input autocomplete="off" placeholder="Categoria" type="text" name="categoria" id="cat" />
+            <input autocomplete="off" placeholder="Imagem" type="text" name="imagem" id="img" />
+            <input autocomplete="off" placeholder="Descrição" type="text" name="descricao" id="description" />
+            <input autocomplete="off" placeholder="id" type="text" name="id" id="id" />
+            <button type="submit">Enviar</button>
         </form>
-        <div id="result"></div>
+
+        <section class="delete">
+          <h2>Deletar produto</h2>    
+            <input autocomplete="off" placeholder="id" type="text" name="id" id="idDel"/>  
+            <button id="delete" >Deletar</button>
+        </section>
+
+        <section class="get">
+          <h2>Encontrar produto</h2>    
+            <input placeholder="id" type="text" name="id" id="idGet"/>
+            <button id="get">Procurar</button>
+        </section>
+
       </div>
 
     <script src="/src/script/mock/admin.js"></script>
