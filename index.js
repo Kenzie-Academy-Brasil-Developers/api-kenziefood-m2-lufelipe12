@@ -26,7 +26,7 @@ export default function creatingShowCase(item) {
         cat.setAttribute('id', 'section')
         name.innerText = nome;
         description.innerText = descricao;
-        price.innerText = preco;
+        price.innerText = `R$ ${preco.toFixed(2)}`;
         button.innerText = "🛒";
         button.id = id;
         button.className = "add";
