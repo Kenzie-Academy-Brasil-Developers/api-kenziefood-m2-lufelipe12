@@ -1,8 +1,6 @@
 import db from "../mock/db.js";
 import creatingShowCase from "../../../index.js"
 
-
-
 function buttonSectionEvent(){
     let productSection = document.querySelectorAll('#section')
     productSection.forEach(item => {
@@ -51,7 +49,6 @@ const whatSection = (sectionFilter, product) => {
     }
 }
 
-
 function sectionFilter(section) {
     const response = db;
     const secao = response.filter(item => {
@@ -59,8 +56,6 @@ function sectionFilter(section) {
     })
     creatingShowCase(secao)
 }
-
-
 
 all.addEventListener('click', function () {
     allItems()
