@@ -1,18 +1,16 @@
 import db from '../mock/db.js';
 
-const main = document.getElementById('mainProducts');
 const cart = document.getElementById('itemsToBuy');
 const empty = document.getElementById('emptyCar');
 const balance = document.getElementById('balance');
 
-let itemsInCart = []
-
-//tentando implementar localstorage
-const local = Storage.array = itemsInCart;
+/// itemsInCart = JSON.parse(localStorage.getItem('cart'))
+let itemsInCart = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : []
 
 function addToCart(productId, productList) {
     const filteredProduct = productList.find(selectedProduct => selectedProduct.id == productId);
     itemsInCart.push(filteredProduct);
+    localStorage.setItem('cart', JSON.stringify(itemsInCart))
 }
 
 function cartMaker(itemsInCart) {
@@ -41,17 +39,23 @@ function cartMaker(itemsInCart) {
 const makingCart = (itemsInCart, cartMaker) => {
     const itemsToBuy = document.getElementById('itemsToBuy');
     itemsToBuy.innerHTML = '';
-
+    if (itemsInCart.length > 0) {
+        empty.style.display = 'none';
+        balance.style.display = 'block';
+    }
     itemsInCart.forEach(element => {
+        attPrice(totalPrice, itemsInCart);
         cartMaker(element);
     })
 }
 
-const totalPrice = (itemsInCart) => {
+makingCart(itemsInCart, cartMaker)
+
+function totalPrice (itemsInCart) {
     return itemsInCart.reduce((a, b) => a + b.preco, 0);
 }
 
-const attPrice = (totalPrice, itemsInCart) => {
+function attPrice(totalPrice, itemsInCart) {
     let price = document.getElementById('price');
     let quantity = document.getElementById('quantity');
     price.innerText = `R$ ${totalPrice(itemsInCart).toFixed(2)}`;
@@ -64,9 +68,9 @@ export const mainInterceptor = (evt) => {
         const productId = buyButton.getAttribute('id');
         addToCart(productId, db);
         makingCart(itemsInCart, cartMaker);
-        balance.style.display = 'block';
         attPrice(totalPrice, itemsInCart);
         empty.style.display = 'none';
+        balance.style.display = 'block';
     }
 
 }
@@ -75,6 +79,7 @@ const eraseItem = (itemsInCart, itemId) => {
     let product = itemsInCart.find(item => itemId == item.id);
     let index = itemsInCart.indexOf(product);
     itemsInCart.splice(index, 1);
+    localStorage.setItem('cart', JSON.stringify(itemsInCart))
 }
 
 export const cartInterceptor = (evt) => {

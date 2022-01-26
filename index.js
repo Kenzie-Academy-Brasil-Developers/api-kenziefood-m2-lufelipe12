@@ -23,10 +23,12 @@ export default function creatingShowCase(item) {
         img.src = imagem;
         cat.innerText = categoryIcon(categoria);
         cat.className = categoria.toLowerCase();
+        cat.setAttribute('id', 'section')
         name.innerText = nome;
         description.innerText = descricao;
         price.innerText = `R$ ${preco}`;
         price.className = "price"
+        price.innerText = `R$ ${preco.toFixed(2)}`;
         button.innerText = "🛒";
         button.id = id;
         button.className = "add";
