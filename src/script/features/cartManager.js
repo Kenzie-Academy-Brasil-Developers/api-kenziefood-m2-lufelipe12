@@ -15,7 +15,7 @@ class CartManager{
         localStorage.setItem('cart', JSON.stringify(itemsInCart))
     }
 
-    static attPrice(itemsInCart) {
+    static attPrice(totalPrice, itemsInCart) {
         let price = document.getElementById('price');
         let quantity = document.getElementById('quantity');
         price.innerText = `R$ ${this.totalPrice(itemsInCart).toFixed(2)}`;
