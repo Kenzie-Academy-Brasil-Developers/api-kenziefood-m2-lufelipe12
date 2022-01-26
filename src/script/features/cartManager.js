@@ -70,7 +70,7 @@ export const mainInterceptor = (evt) => {
         makingCart(itemsInCart, cartMaker);
         attPrice(totalPrice, itemsInCart);
         empty.style.display = 'none';
-        balance.style.display = 'block';
+        balance.style.display = 'flex';
     }
 
 }
@@ -90,7 +90,7 @@ export const cartInterceptor = (evt) => {
         makingCart(itemsInCart, cartMaker);
         attPrice(totalPrice, itemsInCart);
         if (itemsInCart.length === 0) {
-            empty.style.display = 'block';
+            empty.style.display = 'flex';
             balance.style.display = 'none';
         }
     }
