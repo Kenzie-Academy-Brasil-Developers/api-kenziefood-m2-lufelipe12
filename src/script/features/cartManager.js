@@ -24,7 +24,7 @@ function cartMaker(itemsInCart) {
     img.src = itemsInCart.imagem;
     name.innerText = itemsInCart.nome;
     type.innerText = itemsInCart.categoria;
-    price.innerText = `R$ ${itemsInCart.preco.toFixed(2)}`;
+    price.innerText = ` R$ ${itemsInCart.preco.toFixed(2)}`;
     button.setAttribute('data-id', itemsInCart.id);
     button.innerText = 'X';
 
