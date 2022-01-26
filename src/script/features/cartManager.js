@@ -25,9 +25,11 @@ function cartMaker(itemsInCart) {
     img.src = itemsInCart.imagem;
     name.innerText = `${itemsInCart.nome.slice(0, 17)} ...`;
     type.innerText = itemsInCart.categoria;
+    type.className = 'typeBasket'
     price.innerText = ` R$ ${itemsInCart.preco.toFixed(2)}`;
+    price.className = 'priceBasket'
     button.setAttribute('data-id', itemsInCart.id);
-    button.innerText = 'X';
+    button.innerText = '🗑️';
 
     section.appendChild(img)
     divtext.appendChild(name)
