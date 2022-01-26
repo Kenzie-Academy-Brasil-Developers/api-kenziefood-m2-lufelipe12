@@ -1,39 +1,63 @@
-
 body {
     font-family: 'Poppins', sans-serif;
     display: flex;
     justify-content: center;
     align-content: center;
-    flex-direction: column; 
+    flex-direction: column;
 }
 
-header{
+header {
     min-width: 300px;
-    height: 100px;
+    height: 115px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-#cart{
+.inputButton{
+    display: flex;
+    justify-content: center;
+    background-color: #F8F9FA;
+    border-radius: 30px;
+}
+
+div button img{
+    width: 15px;
+    height: 15px;
+}
+
+header button{
+    border: none;
+    border-radius: 50%;
+    background-color: #F8F9FA;
+}
+
+#cart {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-header img{
-    width: 100px;
-    height: 50px;
+h1{
+    color: white;
+    font-weight: 700;
 }
 
-header input{
+header img {
+    width: 123px;
+    height: 40px;
+}
+
+header input {
     width: 200px;
     height: 49px;
     border-radius: 30px;
     text-align: center;
     margin: 10px 0;
+    border: none;
+    background-color: #F8F9FA;
 }
 
 main {
@@ -50,7 +74,7 @@ main div {
     justify-content: center;
 }
 
-main div h2{
+main div h2 {
     font-weight: bold;
 }
 
@@ -60,58 +84,60 @@ main img {
     height: 200px;
 }
 
-main section{
+main section {
     margin-top: 10px;
     display: flex;
     justify-content: space-between;
     align-content: center;
 }
 
-.price{
+.price {
     color: black;
     font-weight: bold;
 }
 
-#tittle{
+#tittle {
     margin-top: 10px;
     margin-bottom: 20px;
-    text-align: center;
     width: 320px;
     height: 59.85px;
-    left: 18px; 
+    left: 18px;
     top: 616px;
     background: #FF2253;
     border-radius: 14.9625px 14.9625px 0px 0px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
-#itemsToBuy{
+#itemsToBuy {
     display: flex;
     justify-content: center;
     align-content: center;
     width: 320px;
-    min-height: 200px;    
+    min-height: 200px;
     background: #F8F9FA;
     flex-direction: column;
 }
 
-#itemsToBuy div{
+#itemsToBuy div {
     margin: 5px;
     display: flex;
     flex-direction: column;
 }
 
-#itemsToBuy section{
+#itemsToBuy section {
     display: flex;
     justify-content: space-between;
 }
 
-#emptyCar img{
+#emptyCar img {
     width: 50px;
     height: 50px;
     margin-left: 42%;
 }
 
-#emptyCar{
+#emptyCar {
     width: 320px;
     height: 100px;
     display: flex;
@@ -121,36 +147,52 @@ main section{
     text-align: center;
     background: #F8F9FA;
     font-size: 11px;
-    color: #868E96;;
+    color: #868E96;
+    ;
 }
 
-#itemsToBuy img{
+#itemsToBuy img {
     width: 75px;
     height: 75px;
     border-radius: 8px;
 }
 
-#itemsToBuy p, #itemsToBuy span{
+#itemsToBuy p, #itemsToBuy span {
     margin-bottom: 10px;
 }
 
-#itemsToBuy button{
-    width: 26px;
-    height: 26px;
-    border-radius: 8px;
+#itemsToBuy p {
+    font-weight: 700;
+    line-height: 20px;
 }
 
-main img{
+.typeBasket {
+    color: #868E96;
+    font-size: 14px;
+}
+
+.priceBasket {
+    color: #212529;
+}
+
+#itemsToBuy button {
+    width: 26px;
+    height: 26px;
+    border: none;
+    background: white;
+}
+
+main img {
     border: 3px solid #FFE9EE;
     border-radius: 8px;
 }
 
-main h2{
+main h2 {
     margin-top: 10px;
     margin-bottom: 20px;
 }
 
-main p{
+main p {
     margin-bottom: 10px;
     text-align: justify;
     font-size: 12px;
@@ -158,7 +200,7 @@ main p{
     color: #0000006c;
 }
 
-.add{
+.add {
     width: 35px;
     height: 35px;
     border-radius: 50%;
@@ -166,32 +208,19 @@ main p{
     background-color: #E4F7EF;
 }
 
-.button{
+.button {
     display: flex;
     margin: 20px 20px;
     justify-content: center;
     align-items: center;
-    
+
 }
 
-body .button .todos{
-    background-color: #F8F9FA;
-    border: 1px solid #212529;
+button:hover {
+    cursor: pointer;
 }
 
-body .button .panificadora{
-    background-color: #FFF7F4;
-}
-
-body .button .frutas{
-    background-color: #FFE4EA;
-}
-
-body .button .bebidas{
-    background-color: #F3EEF5;
-}
-
-.todos, .bebidas, .panificadora, .frutas{
+.todos, .bebidas, .panificadora, .frutas {
     width: 94px;
     height: 30px;
     border-radius: 30px;
@@ -206,27 +235,43 @@ body .button .bebidas{
     border: none;
 }
 
-#balance{
+.button button {
+    background-color: white;
+}
+
+.button button:hover {
+    background-color: #FFE4EA;
+    border: 1px solid #8c8e92;
+}
+
+
+#balance {
     display: none;
 }
 
-.flex{
+.flex {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    width: 290px;
+    height: 120px;
+    font-weight: 700;
+    font-size: 14px;
 }
 
-.flex section{
+.flex section {
     display: flex;
     justify-content: space-between;
     padding: 10px 10px 0 0;
 }
 
-@media(min-width: 768px){
-    body{
+@media(min-width: 768px) {
+    body {
         display: flex;
         justify-content: center;
-        align-items: center;
+        max-width: 1600px;
     }
+
     main {
         display: flex;
         flex-wrap: wrap;
@@ -234,31 +279,57 @@ body .button .bebidas{
         align-items: center;
         overflow: hidden;
     }
-    header{
-        display: flex;
+
+    header {
+        padding: 0px 30px;
         min-width: 700px;
         align-items: center;
         height: 80px;
         background: #FFFFFF;
-        box-shadow: 0px 0px 40px -20px rgba(0, 0, 0, 0.25);
         margin-bottom: 20px;
         flex-direction: row;
         justify-content: space-between;
+
     }
-    .button{
-        margin-right: 40vh;
+
+    .button {
+        justify-content: flex-start;
+
     }
 
 }
 
-@media(min-width: 1024px){
-    main{
+@media(min-width: 1024px) {
+    main {
         width: 1000px;
     }
-    .vitrine{
+
+    header{
+        padding: 0px 40px;
+    }
+
+    .vitrine {
         display: flex;
         justify-content: center;
         align-items: flex-start;
     }
 }
 
+@media(min-width:1440px){
+    header{
+        padding: 0px 70px;
+    }
+    .button {
+        padding: 0px 25px;
+     }
+}
+
+@media(min-width:1600px){
+    header{
+        padding: 0px 150px;
+    }
+
+    .button {
+       padding: 0px 105px;
+    }
+}

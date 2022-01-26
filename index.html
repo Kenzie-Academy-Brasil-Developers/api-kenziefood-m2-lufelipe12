@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,56 +13,53 @@
     <link rel="stylesheet" href="./src/style/style.css">
     <title>Kenzie Foods</title>
 </head>
+
 <body>
     <header>
         <img src="./src/images/kenziefoodslogo.png" alt="logo kenzie">
-        <input type="text" placeholder="Pesquisa por produto" class="input">
+        <div class="inputButton">
+            <input type="text" placeholder="Pesquisa por produto" class="input">
+            <button><img src="./src/images/search.png" alt="search"></button>
+        </div>
     </header>
-    
     <div class="button">
-    <!-- botões de filtro -->
+        <!-- botões de filtro -->
         <button class="todos">Todos</button>
         <button class="bebidas">🥂 Bebidas</button>
         <button class="panificadora">🥖 Panificadora</button>
         <button class="frutas">🍉 Frutas</button>
     </div>
-
     <div class="vitrine">
-    <main id="mainProducts">
-        <!-- aqui ficam os produtos -->
-    </main>
-
-    <section id="cart">
-        <!-- seção do carrinho -->
-        <div id="tittle">
-            <img src="" alt="">
-            <h1>Carrinho</h1>
-        </div>
-
-        <div id="emptyCar">
-            <!-- Essa parte somente aparece quando o carrinho está vazio -->
-            <img src="./src/images/cart.png" alt="carrinho">
-            <span>Ops!</span>
-            <p>Por enquanto não temos produto no carrinho</p>
-        </div>
-
-        <div id="itemsToBuy"></div>
-         <!-- Esse span deve aparecer somente quando o carrinho tiver item -->
-        <div id="balance">
-            <div class="flex">
-                <section>
-                    <span>Quantidade</span>
-                    <span id="quantity">0</span>
-                </section>
-                <section>
-                    <span>Preço</span>
-                    <span id="price">R$ 0</span>
-                </section>
-                
+        <main id="mainProducts">
+            <!-- aqui ficam os produtos -->
+        </main>
+        <section id="cart">
+            <!-- seção do carrinho -->
+            <div id="tittle">
+                <img src="./src/images/carrinho.png" alt="">
+                <h1>Carrinho</h1>
             </div>
-        </div>
-
-    </section>
+            <div id="emptyCar">
+                <!-- Essa parte somente aparece quando o carrinho está vazio -->
+                <img src="./src/images/cart.png" alt="carrinho">
+                <span>Ops!</span>
+                <p>Por enquanto não temos produto no carrinho</p>
+            </div>
+            <div id="itemsToBuy"></div>
+            <!-- Esse span deve aparecer somente quando o carrinho tiver item -->
+            <div id="balance">
+                <div class="flex">
+                    <section>
+                        <span>Quantidade</span>
+                        <span id="quantity">0</span>
+                    </section>
+                    <section>
+                        <span>Preço</span>
+                        <span id="price">R$ 0</span>
+                    </section>
+                </div>
+            </div>
+        </section>
     </div>
 
 
@@ -70,4 +68,5 @@
     <script type="module" src="./index.js"></script>
     <script type="module" src="./src/script/features/filter.js"></script>
 </body>
+
 </html>
