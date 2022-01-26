@@ -1,4 +1,4 @@
-import db from "../mock/db.js";
+import {db} from "../mock/db.js";
 import creatingShowCase from "../../../index.js"
 
 

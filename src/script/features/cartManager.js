@@ -1,10 +1,9 @@
-import db from '../mock/db.js';
+import {db} from '../mock/db.js';
 
 const cart = document.getElementById('itemsToBuy');
 const empty = document.getElementById('emptyCar');
 const balance = document.getElementById('balance');
 
-/// itemsInCart = JSON.parse(localStorage.getItem('cart'))
 let itemsInCart = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : []
 
 function addToCart(productId, productList) {
