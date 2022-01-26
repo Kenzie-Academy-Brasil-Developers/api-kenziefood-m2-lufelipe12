@@ -19,20 +19,25 @@ function cartMaker(itemsInCart) {
     const price = document.createElement('span');
     const button = document.createElement('button');
     const div = document.createElement('div');
+    const section = document.createElement('section');
+    const divtext = document.createElement('div')
 
     img.src = itemsInCart.imagem;
-    name.innerText = itemsInCart.nome;
+    name.innerText = `${itemsInCart.nome.slice(0, 17)} ...`;
     type.innerText = itemsInCart.categoria;
     price.innerText = ` R$ ${itemsInCart.preco.toFixed(2)}`;
     button.setAttribute('data-id', itemsInCart.id);
     button.innerText = 'X';
 
+    section.appendChild(img)
+    divtext.appendChild(name)
+    divtext.appendChild(type)
+    divtext.appendChild(price)
+    section.appendChild(divtext)
+    section.appendChild(button)
+    div.appendChild(section)
     cart.appendChild(div)
-    div.appendChild(img)
-    div.appendChild(name)
-    div.appendChild(type)
-    div.appendChild(price)
-    div.appendChild(button)
+    
 }
 
 const makingCart = (itemsInCart, cartMaker) => {
