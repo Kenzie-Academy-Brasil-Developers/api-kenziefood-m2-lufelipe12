@@ -24,4 +24,5 @@ body, .container{
 
 #path-post button, .delete button, .get button{
     border: none;
+    margin-bottom: 5px;
 }

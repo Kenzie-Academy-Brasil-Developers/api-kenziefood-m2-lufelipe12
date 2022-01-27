@@ -4,6 +4,8 @@ const get = document.getElementById("get")
 const del = document.getElementById("delete")
 const inputGet = document.getElementById("idGet")
 const inputDel = document.getElementById("idDel")
+const allget = document.getElementById("allget")
+const atualizar = document.querySelector(".atualizar")
 
 async function handleSubmit(evt) {
     evt.preventDefault()
@@ -31,6 +33,7 @@ async function handleSubmit(evt) {
     }
 }
 registerForm.addEventListener("submit", handleSubmit)
+atualizar.addEventListener("click", handleSubmit)
 
 //rota post 
 async function createUpdateProducts(data) {
@@ -80,6 +83,10 @@ async function getApi(id) {
 
 get.addEventListener('click', async function () {
     getApi(inputGet.value)
+})
+
+allget.addEventListener('click', async function () {
+    getApi("")
 })
 
 //rota delete 
