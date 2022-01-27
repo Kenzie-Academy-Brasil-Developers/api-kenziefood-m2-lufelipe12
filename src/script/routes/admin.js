@@ -12,6 +12,8 @@ async function handleSubmit(evt) {
     let data = {}
     const elements = registerForm.elements
 
+  
+
     for (let i = 0; i < elements.length; i++) {
         let item = elements[i];
         if (item.name !== "") {
@@ -25,13 +27,13 @@ async function handleSubmit(evt) {
     if (boleano) {
         const response = await patchApi(data, id);
     } else {
-        const response = await createUpdateUser(data);
+        const response = await createUpdateProducts(data);
     }
 }
 registerForm.addEventListener("submit", handleSubmit)
 
 //rota post 
-async function createUpdateUser(data) {
+async function createUpdateProducts(data) {
     const response = await fetch(
         `https://kenzie-food-api.herokuapp.com/my/product`,
         {
