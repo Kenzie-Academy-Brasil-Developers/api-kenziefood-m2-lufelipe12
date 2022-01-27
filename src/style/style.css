@@ -142,11 +142,17 @@ main section {
 
 #itemsToBuy {
     display: flex;
+    position: relative;
     justify-content: center;
     align-content: center;
     width: 320px;
     background: #F8F9FA;
     flex-direction: column;
+}
+
+.scroll{
+    max-height: 400px;
+    overflow-y: auto;
 }
 
 #itemsToBuy div {
