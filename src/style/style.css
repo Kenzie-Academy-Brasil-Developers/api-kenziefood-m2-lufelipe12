@@ -144,8 +144,6 @@ main section {
     display: flex;
     justify-content: center;
     align-content: center;
-    /* max-height: 400px;
-    overflow: scroll; */
     width: 320px;
     background: #F8F9FA;
     flex-direction: column;
